@@ -50,7 +50,10 @@ namespace Test_Four
 
 
 
-        public string Type { }
+        public string Type
+        {
+            get { return this.GetType().Name; }
+        }
 
 
 

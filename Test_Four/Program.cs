@@ -56,62 +56,63 @@
                 {
 
                     Console.WriteLine("No such name in the Database!");
+                }
 
 
 
 
                 else
 
+                {
+
+                    if (trainer == null)
+
                     {
 
-                        if (trainer == null)
-
-                        {
-
-                            trainer = new Trainer(trainerName, current);
-
-                        }
-
-                        trainer.Work(current);
-
-                        trainer.Make();
+                        trainer = new Trainer(trainerName, current);
 
                     }
 
+                    trainer.Work(current);
 
-
-                }
-
-            }
-
-            private static IAnimal CreateAnimal(string[] line)
-
-            {
-
-                IAnimal animal = null;
-
-                switch (line[0])
-
-                {
-
-                    case "Cat":
-
-                        animal = new Cat(line[1]);
-
-                        break;
-
-                    case "Dog":
-
-                        animal = new Dog(line[1]);
-
-                        break;
+                    trainer.Make();
 
                 }
 
-                return animal;
+
 
             }
 
         }
+
+        private static IAnimal CreateAnimal(string[] line)
+
+        {
+
+            IAnimal animal = null;
+
+            switch (line[0])
+
+            {
+
+                case "Cat":
+
+                    animal = new Cat(line[1]);
+
+                    break;
+
+                case "Dog":
+
+                    animal = new Dog(line[1]);
+
+                    break;
+
+            }
+
+            return animal;
+
+        }
+
     }
 }
+

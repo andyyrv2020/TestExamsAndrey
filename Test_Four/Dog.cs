@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 namespace Test_Four
 {
 
-    class Dog
+    class Dog : Animal
 
     {
 
         public Dog(string name) : base(name)
 
         {
-
+            
         }
 
 
@@ -22,9 +22,7 @@ namespace Test_Four
         public override string MakeNoise()
 
         {
-
-
-
+            return "Woof!";
         }
 
 
@@ -33,7 +31,7 @@ namespace Test_Four
 
         {
 
-
+            return "Hold my paw, human!";
 
         }
 

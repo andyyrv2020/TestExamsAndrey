@@ -14,80 +14,81 @@ namespace Test_Four
 
         private IAnimal entity;
 
-    private string name;
+        private string name;
 
 
 
-    public Trainer(string name, IAnimal entity)
-
-    {
-
-        this.Name = name;
-
-        this.Entity = entity;
-
-    }
-
-
-
-    public string Name
-
-    {
-
-        private set
+        public Trainer(string name, IAnimal entity)
 
         {
 
-            if (string.IsNullOrEmpty(value) || string.IsNullOrWhiteSpace(value))
+            this.Name = name;
+
+            this.Entity = entity;
+
+        }
+
+
+
+        public string Name
+
+        {
+            get { return name; }//
+
+            private set
 
             {
 
-                throw new ArgumentException("Name can't be null or empty!");
-            }
+                if (string.IsNullOrEmpty(value) || string.IsNullOrWhiteSpace(value))
 
-            name = value;
+                {
+
+                    throw new ArgumentException("Name can't be null or empty!");
+                }
+
+                name = value;
+
+            }
 
         }
 
-    }
-
-    public IAnimal Entity
-
-    {
-
-        get { return Еntity; }
-
-        private set
+        public IAnimal Entity
 
         {
 
-            entity = value;
+            get { return entity; }
+
+            private set
+
+            {
+
+                entity = value;
+
+            }
+
+        }
+
+
+
+        public void Work(IAnimal entity)
+
+        {
+
+            this.Entity = entity;
+
+            Console.WriteLine($"Trainer {this.Name} works with {entity}!");
+
+        }
+
+
+
+        public void Make()
+
+        {
+
+            this.Entity.Perform();
 
         }
 
     }
-
-
-
-    public void Work(IAnimal entity)
-
-    {
-
-        this.Entity = entity;
-
-        Console.WriteLine($"Trainer {this.Name} works with {Entity}!");
-
-    }
-
-
-
-    public void Make()
-
-    {
-
-        this.Entity.Perform();
-
-    }
-
-}
 }

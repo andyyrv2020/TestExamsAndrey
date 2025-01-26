@@ -7,11 +7,9 @@ using System.Threading.Tasks;
 namespace Test_Four
 {
 
-    interface IMakeNoise
+    internal interface IMakeNoise
 
     {
-
         string MakeNoise();
-
     }
 }

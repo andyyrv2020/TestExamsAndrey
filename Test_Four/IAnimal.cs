@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Test_Four
 {
 
-    interface IAnimal
+    public interface IAnimal : IMakeNoise, IMakeTrick
 
     {
 

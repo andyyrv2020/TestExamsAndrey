@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Test_Four
 {
 
-    class Cat
+    class Cat : Animal
 
     {
 
@@ -22,8 +22,7 @@ namespace Test_Four
         public override string MakeNoise()
 
         {
-
-
+            return "Meow!";
 
         }
 
@@ -33,7 +32,7 @@ namespace Test_Four
 
         {
 
-
+            return "No trick for you! I'm too lazy!";
 
         }
 

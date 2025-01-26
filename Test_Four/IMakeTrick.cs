@@ -7,11 +7,9 @@ using System.Threading.Tasks;
 namespace Test_Four
 {
 
-    interface IMakeTrick
+    internal interface IMakeTrick
 
     {
-
         string MakeTrick();
-    
     }
 }
